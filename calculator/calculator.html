@@ -1,0 +1,89 @@
+
+
+
+
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css" />
+    
+    <style type="text/css">
+        table {
+            table-collapse: collapse;
+            border-spacing:0;
+            border-color: gray;
+        }
+
+        td {
+            border: 1px groove black;
+            padding: 7px;
+
+        }
+
+        th {
+            border: 1px groove black;
+            padding: 7px;
+   
+        }
+        tr:nth-child(even) {background:white}
+        
+        .ctr {
+            text-align: center
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="table">
+        <button id='clear' onclick=clear_table() >CLEAR</button>
+        <table id="cupFinals">
+            <thead id="thead">
+                <tr>
+                    <th>Operation</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="matchData"></tbody>
+        </table>
+    </div>
+    <div class="container">
+        <div id="resultShow" class="resultShow"></div>
+        <div id="calculator" class="calculator">
+
+            
+
+            <input id="viewer" class="viewer" width="80px" height="40px" autofocus />
+
+            <button class="num" id="7" onclick=onButtonClick(id) data-num="7">7</button>
+            <button class="num" id="8" onclick=onButtonClick(id) data-num="8">8</button>
+            <button class="num" id="9" onclick=onButtonClick(id) data-num="9">9</button>
+            <button data-ops="plus" id="+" onclick=onButtonClick(id) class="ops">+</button>
+
+            <button class="num" id="4" onclick=onButtonClick(id) data-num="4">4</button>
+            <button class="num" id="5" onclick=onButtonClick(id) data-num="5">5</button>
+            <button class="num" id="6" onclick=onButtonClick(id) data-num="6">6</button>
+            <button data-ops="minus" id="-" onclick=onButtonClick(id) class="ops">-</button>
+
+            <button class="num" id="1" onclick=onButtonClick(id) data-num="1">1</button>
+            <button class="num" id="2" onclick=onButtonClick(id) data-num="2">2</button>
+            <button class="num" id="3" onclick=onButtonClick(id) data-num="3">3</button>
+            <button data-ops="times" id="*" onclick=onButtonClick(id) class="ops">*</button>
+
+            <button class="num" id="0" onclick=onButtonClick(id) data-num="0">0</button>
+            <button id="cancle" onclick="reset()" class="clear">C</button>
+            <button  onclick="equal()" class="ops">=</button>
+            <button data-ops="divided by" id="/" onclick=onButtonClick(id) class="ops">/</button>
+
+
+        </div>
+</div>
+
+
+</body>
+
+</html>
