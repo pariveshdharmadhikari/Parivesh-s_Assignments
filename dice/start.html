@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" >Start</button>
+    <hr>
+    <h2>GAME RULES:</h2>
+
+    <h4>- The game has 2 players, playing in rounds</h4>
+    <h4>- In each turn, a player rolls a dice as many times as he whishes.</h4>
+    <h4>- Each result get added to his ROUND score</h4>
+    <h4>- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</h4>
+    <h4>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score.</h4>
+    <h4>- After that, it's the next player's turn</h4>
+    <h4>- The first player to reach 100 points on GLOBAL score wins the game</h4>
+    <h4>- A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn.</h4>
+    <h4>- Add an input field to the HTML where players can set the winning score.</h4>
+        <div id="myModal" class="modal">
+        
+          <!-- Modal content -->
+          <form action="index.html" method="GET">
+            <div class="modal-content">
+            <div class="modal-header">
+            <span class="close">&times;</span>
+              <h2>Welcome to the Dice game</h2>
+            </div>
+            <div class="modal-body">
+            <table class='table'>
+            <tr>
+                    <td><label></label>FirstPlayer</label><input name="player_1" id="player-1-name" type="text" placeholder="Enter your name" required="required" > </td>
+                    <td><label></label>SecondPlayer</label><input name="player_2" id="player-2-name" type="text" placeholder="Enter your name" required="required"> </td>
+                </tr>
+                <tr>
+                    <td><label>Winning Score</label><input name="maxScore" id="maxScore" type="number" placeholder="Enter Winning Score" required="required"></td>
+                </tr>
+            </table>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="submit" >OK</button>
+            </div>
+          </div>
+        </div>
+        </form>
+    </body>
+    <script src="PopupModel.js"></script>
+</html>
